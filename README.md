@@ -41,7 +41,13 @@ docker-compose restart # 重启
 
 ```bash
 docker-compose exec php bash   # 进入到php容器中
-apt install -y php7.4-mysql  # 安装php-mysqli扩展
+docker-php-ext-install mysqli  # 安装mysqli扩展
+docker-php-ext-enable mysqli   #启动mysqli扩展
+```
+- 删除扩展
+```bash
+/usr/local/etc/php/conf.d/  # 配置文件路径，直接删除扩展就行了
+rm -rf /usr/local/etc/php/conf.d/docker-php-ext-mysqli.ini  # 删除mysqli扩展
 ```
 
 ## 验证
