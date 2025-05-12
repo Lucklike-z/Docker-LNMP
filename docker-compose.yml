@@ -1,0 +1,32 @@
+# --------------------------------------------------------
+# # Project: Docker_LNMP
+# # Version: 1.0.0
+# # Description: 一个简单的docker LNMP运行环境
+# # Repository: https://github.com/user/my-project
+# # Maintainer: Lucklike <lucklike@qq.com>
+# # --------------------------------------------------------
+
+voersion: '3'
+services:
+  web:
+    image: nginx:1.18
+    ports:
+      - '8000:80'
+    volumes:
+      - './html:/usr/share/nginx/html'
+      - './nginx.conf:/etc/nginx/nginx.conf'
+    depends_on:
+      - php
+  php:
+    image: php:7.4-fpm
+    volumes:
+      - './html:/var/www/html'
+      - './php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf' 
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: '123456'  # 设置MySQL的root密码
+    volumes:
+      - './mysql:/var/lib/mysql'
