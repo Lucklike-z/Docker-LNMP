@@ -26,7 +26,7 @@ docker-compose up -d
 ```
 
 ![image-20250512201022619](https://lkdenote.oss-cn-chengdu.aliyuncs.com/note/image-20250512201022619.png)
-
+## 管理
 - 管理容器，在目录下运行即可管理，注意不能使用down，否则数据将抹除
 
 ```bash
