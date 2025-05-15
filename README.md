@@ -53,3 +53,6 @@ rm -rf /usr/local/etc/php/conf.d/docker-php-ext-mysqli.ini  # 删除mysqli扩展
 ## 验证
 
 - 访问http://主机/mysql.php验证是否配置成功
+
+## 启动问题
+<a href="https://github.com/Lucklike-z/Docker-LNMP/issues">docker-compose up -d启动报错</a>
