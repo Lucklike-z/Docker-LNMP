@@ -6,7 +6,7 @@
 # # Maintainer: Lucklike <lucklike@qq.com>
 # # --------------------------------------------------------
 
-voersion: '3'
+version: '3'
 services:
   web:
     image: nginx:1.18
